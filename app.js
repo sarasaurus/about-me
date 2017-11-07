@@ -2,13 +2,13 @@
 //no text coercion... etc always goes first!
 
 'use strict';
-var kids =prompt('how many kids u have');
+var cool =prompt('Is this person cool?');
 //remember kid is string
-console.log('no of kids:', kids);
+console.log('cool y/n?:', cool);
 
 //always be experiementing with JS, that's how you improoove
-var hats=prompt('how many hats');
-console.log('no of hats:', hats);
+var talented=prompt('Are they talented');
+console.log('talented y/n?:', talented);
 
 //=== means ONLY equals string of 4, of string type
 if (kids === '4' || kids ==='3')  {
