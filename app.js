@@ -1,4 +1,5 @@
 'use strict';
+/*
 //setting user name?
 var userName=prompt('What\'s your name?');
 console.log('user name:', userName);
@@ -72,3 +73,60 @@ if (answerSong === 'yes' || answerSong ==='y') {
 else {
   alert('I don\'t understand please use either yes or no');
 }
+*/
+//sixth prompt
+// For loops
+
+var arr = [1, 2, 3, 4];
+for(var i = 0; i < arr.length; i++) {
+  console.log('array check:', arr[i]);
+  var guessNumber = 4-arr[i];
+  console.log('Guess Number:', guessNumber);
+  var userStates = prompt('How many states has Sarah camped in?');
+  console.log('number of states user guessed:', userStates);
+  if (userStates === '30') {
+    alert('You got it Tiger!');
+    break;
+  } else {
+    alert ('You\'ve got ' + guessNumber + ' tries left bb. You can do it');
+  }
+}
+//this created an infinite loop!
+/*while( guessNumber < 5) {
+  if(guessStates === '30') {
+    alert('Yeah you got it tiger!');
+  } else {
+    alert('You have ' + arr[i] + ' many tries left.  Keep guessing.');
+  }
+}*/
+
+/*
+console.log(i); // <- still a global variable, but defined.
+
+// While loops
+var userName = prompt('what is your name'); // <- null
+// while(!userName) {
+while(userName === null) {
+  console.log('missed it...');
+  userName = prompt('I did not get that: What is your name?');
+}
+
+console.log(userName);
+
+var counter = 0;
+while(true) {
+  if(counter === 10) {
+    break;
+  }
+  counter++;
+}
+console.log('counter', counter);
+//aditional loops
+for(var j = 0; j < arr.length; j += 2) {
+  console.log('second loop', arr[j]);
+}
+if (guessStates === '30') {
+  alert('Yeah Tiger! you got it.');
+} else if (!guessStates === '30') {
+  alert('Nope! buut don\'t cry, you\'ve got' + arr[i] + 'more tries bb.');
+}*/
