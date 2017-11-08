@@ -10,9 +10,8 @@
   answerFrench=answerFrench.toLowerCase();
   //checking....
   console.log('Does Sarah speak French?', answerFrench);
-  //trying for character instead
-  //console.log("The character at index 0   is '" + answerFrench.charAt(0)   + "'")
-  //now I want to do and if between 0-1 then do ___, else if _____
+  
+  //conditionals
   if (answerFrench === 'yes' || answerFrench ==='y')  {
     alert('That\'s sweet of you, but wrong');
   } else if (answerFrench === 'no' || answerFrench === 'n') {
@@ -28,9 +27,8 @@
   answerBike=answerBike.toLowerCase();
   //checking....
   console.log('Does Sarah have a Bike?', answerBike);
-  //trying for character instead
-  //console.log("The character at index 0   is '" + answerBike.charAt(0)   + "'")
-  //now I want to do and if between 0-1 then do ___, else if _____
+
+  //conditionals
   if (answerBike === 'yes' || answerBike ==='y')  {
     alert('Yes, duh.  She\'s a born and bred Seattle-ite');
   } else if (answerBike === 'no' || answerBike === 'n') {
@@ -46,9 +44,8 @@
   answerDraw=answerDraw.toLowerCase();
   //checking....
   console.log('Can she draw?', answerDraw);
-  //trying for character instead
-  //console.log("The character at index 0   is '" + answerDraw.charAt(0)   + "'")
-  //now I want to do and if between 0-1 then do ___, else if _____
+
+  //conditionals
   if (answerDraw === 'yes' || answerDraw ==='y')  {
     alert('Yes, she can.');
   } else if (answerDraw === 'no' || answerDraw === 'n') {
@@ -63,9 +60,8 @@
   answerWater=answerWater.toLowerCase();
   //checking....
   console.log('Does she drink water?', answerWater);
-  //trying for character instead
-  //console.log("The character at index 0   is '" + answerWater.charAt(0)   + "'")
-  //now I want to do and if between 0-1 then do ___, else if _____
+
+  //conditionals
   if (answerWater === 'yes' || answerWater ==='y')  {
     alert('Yes, she does.  Doesn\'t everyone?');
   } else if (answerWater === 'no' || answerWater === 'n') {
@@ -80,9 +76,7 @@ var answerSong=prompt('Does Sarah have a favorite song?');
   answerSong=answerSong.toLowerCase();
   //checking....
   console.log('favorite song?', answerSong);
-  //trying for character instead
-  //console.log("The character at index 0   is '" + answerSong.charAt(0)   + "'")
-  //now I want to do and if between 0-1 then do ___, else if _____
+//conditionals
   if (answerSong === 'yes' || answerSong ==='y')  {
     alert('beep. WRONG. How can you pick one favorite?! ');
   } else if (answerSong === 'no' || answerSong === 'n') {
