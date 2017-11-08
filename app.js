@@ -5,12 +5,9 @@
   alert('Great.  Thanks ' + userName + '.')
 
 //first question
-  var answerFrench=prompt('Does Sarah speak French?');
-  //now I want to convert the answer toLowerCase
-  answerFrench=answerFrench.toLowerCase();
+  var answerFrench=prompt('Does Sarah speak French?').toLowerCase();
   //checking....
   console.log('Does Sarah speak French?', answerFrench);
-  
   //conditionals
   if (answerFrench === 'yes' || answerFrench ==='y')  {
     alert('That\'s sweet of you, but wrong');
@@ -22,12 +19,9 @@
   }
 
 //second question
-  var answerBike=prompt('Does Sarah have a Bicycle?');
-  //now I want to convert the answer toLowerCase
-  answerBike=answerBike.toLowerCase();
+  var answerBike=prompt('Does Sarah have a Bicycle?').toLowerCase();
   //checking....
   console.log('Does Sarah have a Bike?', answerBike);
-
   //conditionals
   if (answerBike === 'yes' || answerBike ==='y')  {
     alert('Yes, duh.  She\'s a born and bred Seattle-ite');
@@ -39,12 +33,9 @@
   }
 
 //third question
-  var answerDraw=prompt('Can Sarah draw?');
-  //now I want to convert the answer toLowerCase
-  answerDraw=answerDraw.toLowerCase();
+  var answerDraw=prompt('Can Sarah draw?').toLowerCase();
   //checking....
   console.log('Can she draw?', answerDraw);
-
   //conditionals
   if (answerDraw === 'yes' || answerDraw ==='y')  {
     alert('Yes, she can.');
@@ -55,12 +46,9 @@
     alert('I don\'t understand please use either yes or no')
   }
 //fourth question
-  var answerWater=prompt('Does Sarah drink water?');
-  //now I want to convert the answer toLowerCase
-  answerWater=answerWater.toLowerCase();
+  var answerWater=prompt('Does Sarah drink water?').toLowerCase();
   //checking....
   console.log('Does she drink water?', answerWater);
-
   //conditionals
   if (answerWater === 'yes' || answerWater ==='y')  {
     alert('Yes, she does.  Doesn\'t everyone?');
@@ -70,9 +58,10 @@
   else {
     alert('I don\'t understand please use either yes or no')
   }
+
 //fifth question
 var answerSong=prompt('Does Sarah have a favorite song?');
-  //now I want to convert the answer toLowerCase
+  //this is how I did it before code review! but now I know better.
   answerSong=answerSong.toLowerCase();
   //checking....
   console.log('favorite song?', answerSong);
