@@ -75,7 +75,7 @@ else {
   alert('I don\'t understand please use either yes or no');
 }
 */
-//sixth prompt
+//sixth Question
 var stateCount=19;
 for(var i = 1; i < 4; i++) {
   console.log('Attempt number:', i);
@@ -97,16 +97,19 @@ for(var i = 1; i < 4; i++) {
   }
 }
 
-//OK! 7th Question. you got this.
+//7th Question
 
 var arrCookie = ['chocolate', 'lemon', 'all', 'sandwich', 'maple', 'crunchy'];
-for (var j = 1; j<6; j++) {
-  console.log('Try number:', j);
+for (var j = 6; j>0; j--) {
+  console.log('Guesses remaining:', j);
   var userCookie = prompt('What is one of Sarah\'s six preferred cookies?').toLowerCase();
-  console.log('Cookie guessed by user:', userCookie);
-  if (userCookie === arrCookie[0]) {
+  console.log('User Guessed:', userCookie);
+  if (arrCookie.includes(userCookie)) {
     alert('You got it Tiger!');
+    score++;
+    alert(arrCookie);
+    break;
   } else {
-    alert('bb you have' + (6-j) + ' tries left.');
+    alert('you have ' + (j) + ' tries left.');
   }
 }
