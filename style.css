@@ -16,7 +16,7 @@ header {
 
 }
 
-main {
+main, footer {
   background-color: yellow;
   padding: 10px;
   width: 1000px;
@@ -26,7 +26,7 @@ main {
   color: red;
 
 }
-h2 {
+h2, h3 {
   color: #ff0bc8;
   background: #8cffc9;
 }
@@ -41,5 +41,5 @@ ul {
 }
 ol{
       background: #8cffc9;
-
+      display: inline;
 }
