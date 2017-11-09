@@ -3,6 +3,7 @@
 var i = 1;
 var score = 0;
 var userName;
+var arrCookie = ['chocolate', 'lemon', 'all', 'sandwich', 'maple', 'crunchy'];
 
 function askName(){
   userName = prompt('What\'s your name?');
@@ -29,9 +30,6 @@ function ask(question, yes) {
   }
 }
 
-
-
-
 function testQuestion(correctness, right, wrong){
   if(correctness === true){
     alert(right);
@@ -49,9 +47,88 @@ testQuestion(ask('Can Sarah draw?', true), 'Yes, she can.', 'Wrong Answer!');
 testQuestion(ask('Does Sarah drink water?', true), 'Yes, she does.  Doesn\'t everyone?', 'Wrong Answer, with out water she would die');
 testQuestion(ask('Does Sarah have a favorite song?', false), 'Yup!  her taste in music is broad and ever-changing', 'beep. WRONG. How can you pick one favorite?!');
 
+function multiAttemptStates(question, maxAttempts, answer){
+  maxAttempts = maxAttempts - 1;
+  for(maxAttempts; maxAttempts >= 0; maxAttempts--){
+    var guess = parseInt(prompt(question));
+    console.log('Guess: ', guess);
+    console.log('Attempt left:', maxAttempts);
+    if (guess === answer) {
+      alert('You got it ' + userName + '!');
+      score++;
+      console.log('Score:', score);
+      break;
+    } else if (guess > answer){
+      alert(userName + ' you\'re to high. ' + maxAttempts + ' tries left.');
+    }
+    else if (guess < answer) {
+      alert(userName + ' you\'re too low ' + maxAttempts + ' tries left.');
+    }
+  }
+}
 
+function multiAttemptCookies(question, maxAttempts, answer){
+  maxAttempts = maxAttempts - 1;
+  for(maxAttempts; maxAttempts >= 0; maxAttempts--){
+    var guess = prompt(question).toLowerCase;
+    console.log('User Guessed:', guess);
+    if (arrCookie.includes(userCookie)) {
+      alert('You got it ' + userName +'!' );
+      score++;
+      console.log('Final Score:', score);
+      break;
+    } else {
+      alert('you have ' + (j) + ' tries left.');
+    }
+  }
+}
+
+multiAttemptStates('How many states has Sarah camped in?', 4, 19);
+multiAttemptCookies('What is one of Sarah\'s six preferred cookies?', 6, arrCookie);
 
 /*
+//Sixth Question
+var stateCount=19;
+for(var i = 0; i < 4; i++) {
+  console.log('Attempt number:', i);
+  var guessNumber = 4-i;
+  console.log('Remaining Guesses out of 4:', guessNumber);
+  var userState = prompt('How many states has Sarah camped in?');
+  console.log('Number user guessed:', userState);
+  var userStateInt = parseInt(userState, 10);
+  if (userStateInt === stateCount) {
+    alert('You got it ' + userName + '!');
+    score++;
+    console.log('Score:', score);
+    break;
+  } else if (userStateInt > stateCount){
+    alert(userName + ' you\'re to high. ' + guessNumber + ' tries left.');
+  }
+  else if (userStateInt < stateCount) {
+    alert(userName + ' you\'re too low ' + guessNumber + ' tries left.');
+  }
+}
+alert('Next Question!');
+
+//7th Question
+var arrCookie = ['chocolate', 'lemon', 'all', 'sandwich', 'maple', 'crunchy'];
+for (var j = 6; j>0; j--) {
+  console.log('Guesses remaining:', j);
+  var userCookie = prompt('What is one of Sarah\'s six preferred cookies?').toLowerCase();
+  console.log('User Guessed:', userCookie);
+  if (arrCookie.includes(userCookie)) {
+    alert('You got it ' + userName +'!' );
+    score++;
+    console.log('Final Score:', score);
+    break;
+  } else {
+    alert('you have ' + (j) + ' tries left.');
+  }
+}
+alert('Game Over. Thanks for playing ' + userName+ '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
+alert('Total Correct Answers for ' + userName + ': ' + score);
+
+
 //first question
 function firstQuestion() {
   var answerFrench=prompt('Does Sarah speak French?').toLowerCase();
