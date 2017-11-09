@@ -16,7 +16,7 @@ header {
 
 }
 
-main, footer {
+main {
   background-color: yellow;
   padding: 10px;
   width: 1000px;
@@ -39,7 +39,8 @@ ul {
       background: #8cffc9;
 
 }
-ol{
+ol {
       background: #8cffc9;
       display: inline;
+
 }
