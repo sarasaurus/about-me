@@ -1,4 +1,5 @@
 'use strict';
+var score=0;
 /*
 //setting user name?
 var userName=prompt('What\'s your name?');
@@ -75,54 +76,37 @@ else {
 }
 */
 //sixth prompt
-var arr = [1, 2, 3, 4];
-for(var i = 0; i < arr.length; i++) {
-  console.log('array check:', arr[i]);
-  var guessNumber = 4-arr[i];
-  console.log('Guess Number:', guessNumber);
-  var userStates = prompt('How many states has Sarah camped in?');
-  console.log('number of states user guessed:', userStates);
-  var userStateInt = parseInt(userStates, 10);
-  if (userStateInt === 30) {
+var stateCount=19;
+for(var i = 1; i < 4; i++) {
+  console.log('Attempt number:', i);
+  var guessNumber = 4-i;
+  console.log('Remaining Guesses out of 4:', guessNumber);
+  var userState = prompt('How many states has Sarah camped in?');
+  console.log('Number user guessed:', userState);
+  var userStateInt = parseInt(userState, 10);
+  if (userStateInt === stateCount) {
     alert('You got it Tiger!');
+    score++;
+    console.log('Score count:', score);
     break;
-  } else if (userStateInt > 30){
+  } else if (userStateInt > stateCount){
     alert('bb you\'re to high. ' + guessNumber + ' tries left.');
   }
-  else if (userStateInt < 30) {
+  else if (userStateInt < stateCount) {
     alert('bb you\'re too low ' + guessNumber + ' tries left.');
   }
-  else {
-    alert ('over');
+}
+
+//OK! 7th Question. you got this.
+
+var arrCookie = ['chocolate', 'lemon', 'all', 'sandwich', 'maple', 'crunchy'];
+for (var j = 1; j<6; j++) {
+  console.log('Try number:', j);
+  var userCookie = prompt('What is one of Sarah\'s six preferred cookies?').toLowerCase();
+  console.log('Cookie guessed by user:', userCookie);
+  if (userCookie === arrCookie[0]) {
+    alert('You got it Tiger!');
+  } else {
+    alert('bb you have' + (6-j) + ' tries left.');
   }
 }
-/*
-console.log(i); // <- still a global variable, but defined.
-
-// While loops
-var userName = prompt('what is your name'); // <- null
-// while(!userName) {
-while(userName === null) {
-  console.log('missed it...');
-  userName = prompt('I did not get that: What is your name?');
-}
-
-console.log(userName);
-
-var counter = 0;
-while(true) {
-  if(counter === 10) {
-    break;
-  }
-  counter++;
-}
-console.log('counter', counter);
-//aditional loops
-for(var j = 0; j < arr.length; j += 2) {
-  console.log('second loop', arr[j]);
-}
-if (guessStates === '30') {
-  alert('Yeah Tiger! you got it.');
-} else if (!guessStates === '30') {
-  alert('Nope! buut don\'t cry, you\'ve got' + arr[i] + 'more tries bb.');
-}*/
