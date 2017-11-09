@@ -1,11 +1,19 @@
 'use strict';
-var score=0;
-var userName=prompt('What\'s your name?');
-console.log('user name:', userName);
-alert('Great.  Thanks ' + userName + '.');
+
+var i = 1;
+var score = 0;
+var userName;
+
+function askName(){
+  userName = prompt('What\'s your name?');
+  console.log('user name:', userName);
+  alert('Great.  Thanks ' + userName + '.');
+}
 
 function ask(question, yes) {
   var answer = prompt(question).toLowerCase();
+  console.log(i + 'th question', answer);
+  i++;
   if(yes === true) {
     if(answer === 'yes' || answer === 'y' ){
       return true;
@@ -24,19 +32,22 @@ function ask(question, yes) {
 
 
 
-function testQuestion(correctness){
+function testQuestion(correctness, right, wrong){
   if(correctness === true){
-    alert('You got it.');
+    alert(right);
     score++;
     console.log('Score: ', score);
   } else {
-    alert('You are wrong.');
+    alert(wrong);
   }
 }
 
-
-testQuestion(ask('the answer is yes', true));
-
+askName();
+testQuestion(ask('Does Sarah speak French?', false), 'C\'est vrai.  She is a mono-lingual American.', 'That\'s sweet of you, but wrong');
+testQuestion(ask('Does Sarah have a Bicycle?', true), 'Yes, duh.  She\'s a born and bred Seattle-ite', 'Wrong Answer!');
+testQuestion(ask('Can Sarah draw?', true), 'Yes, she can.', 'Wrong Answer!');
+testQuestion(ask('Does Sarah drink water?', true), 'Yes, she does.  Doesn\'t everyone?', 'Wrong Answer, with out water she would die');
+testQuestion(ask('Does Sarah have a favorite song?', false), 'Yup!  her taste in music is broad and ever-changing', 'beep. WRONG. How can you pick one favorite?!');
 
 
 
