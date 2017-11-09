@@ -9,6 +9,7 @@ while (k>=0) {
   console.log('parsed to number: ', userNumber);
   if (userNumber===answerNumber) {
     alert('you got it!');
+    score++;
     break;
   } else if (userNumber>answerNumber) {
     alert('too high, try again, ' + k + ' tries left');
@@ -21,26 +22,28 @@ while (k>=0) {
     console.log('tries left: ', k);
   }
 }
-
-/*
+/* still not getting it
+//1-5 store in array
 var userName=prompt('enter your name');
+var count = 5;
 var score=0;
 
-var arrQuestion = ['likes water', 'likes soda', 'likes choc'];
-var arrAnswer = ['yes', 'no', 'yes'];
-for (var j = 3; j>0; j--) {
-  console.log('Guesses remaining:', j);
-  var userAnswer = prompt('does sarah like' + arrQuestion).toLowerCase();
-  console.log('User Guessed:', userCookie);
-  //If I created a seperate else if for each position in the array to check a specific position against a spec pos answer?
-  // or maybe setting.... I don't even know.
-  if (arrAnswer.includes(userAnswer)) {
-    alert('You got it ' + userName +'!' );
-    score++;
-    console.log('Final Score:', score);
-    break;
+console.log('user name: ', userName);
+console.log('score init: ', score);
+var q1='does s like ice cream?';
+var q2='does sarah like art?';
+var q3='does she like the rain?';
+var q4='does she like bad things?';
+var q5='is she the worst?';
+var arrAnswer = ['yes', 'yes', 'no', 'no', 'no'];
+var arrQuestion = [q1, q2, q3, q4, q5]
+while (count>=0) {
+  var userAnswer1=prompt(arrQuestion[0]).toLowerCase;
+  console.log('user answer to q1 is: ', userAnswer1);
+  if (userAnswer1===arrAnswer[0]) {
+    alert('great, next question');
   } else {
-    alert('you have ' + (j) + ' tries left.');
+    alert ('nope, next question');
   }
 }
 */
