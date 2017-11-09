@@ -40,7 +40,9 @@ ul {
 
 }
 ol {
-      background: #8cffc9;
-      padding: 10px;
+  background: #8cffc9;
+  padding: 10px 30px;
+  margin: 20px auto;
+
 
 }

@@ -1,4 +1,28 @@
 'use strict';
+//Question 6 rewrite
+var k=4;
+var answerNumber=7;
+while (k>=0) {
+  var userAnswer=prompt('what\'s my favorite number?');
+  var userNumber=parseInt(userAnswer, 10);
+  console.log('user entered: ', userAnswer);
+  console.log('parsed to number: ', userNumber);
+  if (userNumber===answerNumber) {
+    alert('you got it!');
+    break;
+  } else if (userNumber>answerNumber) {
+    alert('too high, try again, ' + k + ' tries left');
+    k--;
+    console.log('tries left: ', k);
+  }
+  else if (userNumber<answerNumber){
+    alert('too low, try again, ' + k + ' tries left');
+    k--;
+    console.log('tries left: ', k);
+  }
+}
+
+/*
 var userName=prompt('enter your name');
 var score=0;
 
@@ -9,7 +33,7 @@ for (var j = 3; j>0; j--) {
   var userAnswer = prompt('does sarah like' + arrQuestion).toLowerCase();
   console.log('User Guessed:', userCookie);
   //If I created a seperate else if for each position in the array to check a specific position against a spec pos answer?
-  // or maybe setting I don't even know.
+  // or maybe setting.... I don't even know.
   if (arrAnswer.includes(userAnswer)) {
     alert('You got it ' + userName +'!' );
     score++;
@@ -19,3 +43,4 @@ for (var j = 3; j>0; j--) {
     alert('you have ' + (j) + ' tries left.');
   }
 }
+*/
