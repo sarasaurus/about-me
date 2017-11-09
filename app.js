@@ -4,7 +4,60 @@ var userName=prompt('What\'s your name?');
 console.log('user name:', userName);
 alert('Great.  Thanks ' + userName + '.');
 
+function ask(question, yes) {
+  var answer = prompt(question).toLowerCase();
+  if(yes === true) {
+    if(answer === 'yes' || answer === 'y' ){
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    if(answer === 'no' || answer === 'n' ){
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+
+
+
+function testQuestion(correctness){
+  if(correctness === true){
+    alert('You got it.');
+    score++;
+    console.log('Score: ', score);
+  } else {
+    alert('You are wrong.');
+  }
+}
+
+
+testQuestion(ask('the answer is yes', true));
+
+
+
+
+/*
 //first question
+function firstQuestion() {
+  var answerFrench=prompt('Does Sarah speak French?').toLowerCase();
+  console.log('Does Sarah speak French?', answerFrench);
+  if (answerFrench === 'yes' || answerFrench ==='y') {
+    alert('That\'s sweet of you, but wrong');
+  } else if (answerFrench === 'no' || answerFrench === 'n') {
+    alert('C\'est vrai.  She is a mono-lingual American.');
+    score++;
+    console.log('Score: ', score);
+  }
+  else {
+    alert('I don\'t understand please use either yes or no');
+  }
+}
+firstQuestion();
+
 var answerFrench=prompt('Does Sarah speak French?').toLowerCase();
 console.log('Does Sarah speak French?', answerFrench);
 if (answerFrench === 'yes' || answerFrench ==='y') {
@@ -113,3 +166,4 @@ for (var j = 6; j>0; j--) {
 }
 alert('Game Over. Thanks for playing ' + userName+ '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
 alert('Total Correct Answers for ' + userName + ': ' + score);
+*/
