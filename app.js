@@ -112,4 +112,4 @@ for (var j = 6; j>0; j--) {
   }
 }
 alert('Game Over. Thanks for playing ' + userName+ '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
-alert('Total Correct Answers for ' + userName + ': 'score);
+alert('Total Correct Answers for ' + userName + ': ' + score);
