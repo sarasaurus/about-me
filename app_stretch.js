@@ -22,6 +22,29 @@ while (k>=0) {
     console.log('tries left: ', k);
   }
 }
+/*question 6 using while
+var stateCount=19;
+for(var i = 0; i < 4; i++) {
+  console.log('Attempt number:', i);
+  var guessNumber = 4-i;
+  console.log('Remaining Guesses out of 4:', guessNumber);
+  var userState = prompt('How many states has Sarah camped in?');
+  console.log('Number user guessed:', userState);
+  var userStateInt = parseInt(userState, 10);
+  if (userStateInt === stateCount) {
+    alert('You got it ' + userName + '!');
+    score++;
+    console.log('Score:', score);
+    break;
+  } else if (userStateInt > stateCount){
+    alert(userName + ' you\'re to high. ' + guessNumber + ' tries left.');
+  }
+  else if (userStateInt < stateCount) {
+    alert(userName + ' you\'re too low ' + guessNumber + ' tries left.');
+  }
+}
+alert('Next Question!');*/
+
 /* still not getting it
 //1-5 store in array
 var userName=prompt('enter your name');
