@@ -3,11 +3,10 @@ var score=0;
 var userName=prompt('What\'s your name?');
 console.log('user name:', userName);
 alert('Great.  Thanks ' + userName + '.');
+
 //first question
 var answerFrench=prompt('Does Sarah speak French?').toLowerCase();
-//checking....
 console.log('Does Sarah speak French?', answerFrench);
-//conditionals
 if (answerFrench === 'yes' || answerFrench ==='y') {
   alert('That\'s sweet of you, but wrong');
 } else if (answerFrench === 'no' || answerFrench === 'n') {
@@ -76,7 +75,7 @@ else {
 
 //Sixth Question
 var stateCount=19;
-for(var i = 1; i < 4; i++) {
+for(var i = 0; i < 4; i++) {
   console.log('Attempt number:', i);
   var guessNumber = 4-i;
   console.log('Remaining Guesses out of 4:', guessNumber);
@@ -96,8 +95,8 @@ for(var i = 1; i < 4; i++) {
   }
 }
 alert('Next Question!');
-//7th Question
 
+//7th Question
 var arrCookie = ['chocolate', 'lemon', 'all', 'sandwich', 'maple', 'crunchy'];
 for (var j = 6; j>0; j--) {
   console.log('Guesses remaining:', j);

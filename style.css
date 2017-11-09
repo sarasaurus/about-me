@@ -12,7 +12,7 @@ header {
   font-family: sans-serif;
   font-size: 45px;
   color: yellow;
-  text-align: cener;
+  text-align: center;
 
 }
 
@@ -41,6 +41,6 @@ ul {
 }
 ol {
       background: #8cffc9;
-      display: inline;
+      padding: 10px;
 
 }
