@@ -67,25 +67,30 @@ function multiAttemptStates(question, maxAttempts, answer){
   }
 }
 
-function multiAttemptCookies(question, maxAttempts, answer){
+function multiAttemptCookies(question, maxAttempts){
   maxAttempts = maxAttempts - 1;
   for(maxAttempts; maxAttempts >= 0; maxAttempts--){
-    var guess = prompt(question).toLowerCase;
+    var guess = prompt(question).toLowerCase();
     console.log('User Guessed:', guess);
-    if (arrCookie.includes(userCookie)) {
+    if (arrCookie.includes(guess)) {
       alert('You got it ' + userName +'!' );
       score++;
       console.log('Final Score:', score);
       break;
     } else {
-      alert('you have ' + (j) + ' tries left.');
+      alert('you have ' + (maxAttempts) + ' tries left.');
     }
   }
 }
 
 multiAttemptStates('How many states has Sarah camped in?', 4, 19);
-multiAttemptCookies('What is one of Sarah\'s six preferred cookies?', 6, arrCookie);
+multiAttemptCookies('What is one of Sarah\'s six preferred cookies?', 6);
 
+function end(){
+  alert('Game Over. Thanks for playing ' + userName+ '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
+  alert('Total Correct Answers for ' + userName + ': ' + score);
+}
+end();
 /*
 //Sixth Question
 var stateCount=19;
