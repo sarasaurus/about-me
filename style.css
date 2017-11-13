@@ -58,7 +58,7 @@ nav ul,li {
 }
 
 h2, h3 {
-  color: #ff0bc8;
+  color: #purple;
   background:cadetblue;
   display: block;
 }
@@ -80,6 +80,7 @@ aside {
   background: peachpuff;
   padding: 15px;
   float: right;
+  z-index: 10;
     }
 footer {
   position: fixed;
