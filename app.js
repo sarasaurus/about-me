@@ -73,7 +73,7 @@ function multiAttemptCookies(question, maxAttempts){
     var guess = prompt(question).toLowerCase();
     console.log('User Guessed:', guess);
     if (arrCookie.includes(guess)) {
-      alert('You got it ' + userName +'!' );
+      alert('You got it ' + userName + '!' );
       score++;
       console.log('Final Score:', score);
       break;
@@ -87,7 +87,7 @@ multiAttemptStates('How many states has Sarah camped in?', 4, 19);
 multiAttemptCookies('What is one of Sarah\'s six preferred cookies?', 6);
 
 function end(){
-  alert('Game Over. Thanks for playing ' + userName+ '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
+  alert('Game Over. Thanks for playing ' + userName + '.  Sarah\'s 6 preferred cookies were, in order-- Chocolate, Lemon, All, Sandwich, Maple and Crunchy.');
   alert('Total Correct Answers for ' + userName + ': ' + score);
 }
 end();
